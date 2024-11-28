@@ -5,7 +5,7 @@ import Memories from '../../../images/Memories.svg';
 
 export default function Advantages(){
     return(
-        <div className="w-screen h-[60vh] flex flex-col justify-center max-sm:h-auto bg-[#f2f7f7]">
+        <div className="w-screen h-[70vh] flex flex-col justify-center max-sm:h-auto bg-[#f2f7f7] py-2">
             <div className="font-medium text-4xl text-center max-sm:text-3xl my-10 text-balance ">
                 <p>Погружение в космос рядом с домом</p>
             </div>

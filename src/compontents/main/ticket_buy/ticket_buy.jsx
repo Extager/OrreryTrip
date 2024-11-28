@@ -1,6 +1,6 @@
 export default function Ticket_buy(){
     return(
-        <div className="w-screen h-screen flex flex-col justify-center items-center max-sm:h-auto">
+        <div className="w-screen h-screen flex flex-col justify-center items-center max-sm:h-auto py-2">
             <div className="text-center text-4xl pt-20 font-medium max-sm:text-3xl">
                 <p>Откройте тайны космоса</p>
             </div>
