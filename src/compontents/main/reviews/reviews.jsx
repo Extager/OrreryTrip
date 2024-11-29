@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Left from '../../../images/Left.svg';
 import Right from '../../../images/Right.svg';
@@ -25,13 +25,22 @@ export default function Reviews() {
         }
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isFadding, setisFadding] = useState(false);
 
     const nextReview = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length); 
+        setisFadding(true);
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+            setisFadding(false);
+        }, 500);
     };
 
     const prevReview = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+        setisFadding(true);
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+            setisFadding(false);
+        }, 500);
     };
 
     const swipeHandlers = () => useSwipeable({
@@ -49,33 +58,42 @@ export default function Reviews() {
             </div>
 
             <div className="flex w-[70vw] pb-5 justify-center max-sm:w-auto" {...swipeHandlers}>
-
                 <button onClick={prevReview}>
-                    <img src={Left}
+                    <img 
+                    src={Left}
                     alt="Image Error"
-                    className="w-[51px] h-[96px] flex pr-5 opacity-75 mr-10 max-sm:mr-0"/>
+                    className="w-[51px] h-[96px] flex pr-5 opacity-75 mr-10 max-sm:mr-0 max-sm:opacity-0"/>
                 </button>
 
                 <img src="#" alt="Image Error" className=""/>
 
-                <div className="flex flex-col text-pretty max-sm:text-balance max-w-[50vw] max-sm:max-w-screen">
-                    <p className="text-xl mb-5 font-light">
+                <div className={`flex flex-col text-pretty max-sm:text-balance max-w-[50vw] duration-500 transition-opacity max-sm:max-w-screen ${isFadding?
+                    'opacity-0' : 'opacity-100'}`}
+                >
+                    <p 
+                    className="text-xl mb-5 font-light animate-fadeIn"
+                    >
                         {reviews[currentIndex].text}
                     </p>
 
-                    <p className="text-base font-bold">
+                    <p 
+                    className="text-base font-bold animate-fadeIn"
+                    >
                         {reviews[currentIndex].author}
                     </p>
 
-                    <p className="text-sm">
+                    <p 
+                    className="text-sm animate-ani"
+                    >
                         {reviews[currentIndex].what}
                     </p>
                 </div>
 
                 <button onClick={nextReview}>
-                    <img src={Right} 
+                    <img 
+                    src={Right} 
                     alt="Image Error" 
-                    className="w-[51px] h-[96px] flex pl-5 opacity-75 ml-10 max-sm:ml-0"/>
+                    className="w-[51px] h-[96px] flex pl-5 opacity-75 ml-10 max-sm:ml-0 max-sm:opacity-0"/>
                 </button>
 
                 

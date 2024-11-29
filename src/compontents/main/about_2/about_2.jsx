@@ -5,12 +5,12 @@ import Museum from '../../../images/Museum.svg';
 
 export default function About_2(){
     return(
-        <div className="w-screen h-[60vh] flex flex-col justify-center max-sm:h-auto bg-[#f2f7f7] py-5">
+        <div className="w-screen h-[60vh] flex flex-col justify-center max-sm:h-auto bg-[#f2f7f7] py-5 px-5">
             <div className="font-medium text-4xl text-center max-sm:text-3xl my-10 text-pretty max-sm:text-balance">
                 <p>Погружение в космос рядом с домом</p>
             </div>
 
-            <div className="grid grid-cols-2 justify-items-center mx-auto max-sm:grid-cols-1">
+            <div className="grid grid-cols-2 justify-items-center mx-auto max-sm:grid-cols-1 max-sm:">
                 <div className="flex flex-row my-10 max-w-[460px] text-pretty max-sm:text-balance mx-10 max-lg:mx-0">
                     <img src={Star} alt="Image Error" className='w-[60px] h-[60px]'/>
                     <div className="flex flex-col ml-5">
