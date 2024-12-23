@@ -4,8 +4,9 @@ import Location from '../../images/Location.png';
 
 export  default function Header(){
     return(
-        <div className="w-full h-screen flex flex-col bg-cover bg-[url('../src/images/Header.jpg')] bg-center bg-no-repeat
+        <div className="w-full h-screen flex flex-col  bg-[url('../src/images/Header.jpg')] bg-center bg-no-repeat
          text-pretty max-sm:text-balance text-white text-center items-center justify-center py-15">
+            <div className='absolute inset-0 bg-cover'></div>
             <p className="font-semibold text-5xl max-sm:text-3xl py-10 ">Эксурсия «Тайны звёздного небосклона»</p>
             <p className="font-thin text-2xl max-w-[600px] max-sm:text-xl">Узнайте, как астрономы изучают космос и какие тайны скрывает наша вселенная.</p>
             <div className="flex w-full flex-row justify-center items-start mt-20">

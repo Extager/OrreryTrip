@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Left from '../../../images/Left.svg';
 import Right from '../../../images/Right.svg';
@@ -43,7 +43,7 @@ export default function Reviews() {
         }, 500);
     };
 
-    const swipeHandlers = () => useSwipeable({
+    const SwipeHandlers = () => useSwipeable({
         onSwipedLeft : nextReview,
         onSwipedRight: prevReview,
         preventDefaultTouchmoveEvent: true,
@@ -57,7 +57,7 @@ export default function Reviews() {
                 <p>Отзывы посетителей Саратовского планетария</p>
             </div>
 
-            <div className="flex w-[70vw] pb-5 justify-center max-sm:w-auto" {...swipeHandlers}>
+            <div className="flex w-[70vw] pb-5 justify-center max-sm:w-auto" {...SwipeHandlers}>
                 <button onClick={prevReview}>
                     <img 
                     src={Left}
