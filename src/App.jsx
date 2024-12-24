@@ -5,6 +5,7 @@ import Ticket_buy from './compontents/main/ticket_buy/ticket_buy.jsx';
 import Advantages from './compontents/main/advantages/advantages.jsx';
 import Reviews from './compontents/main/reviews/reviews.jsx';
 import Map from "./compontents/main/map/map.jsx";
+import Form from "./compontents/main/form/form.jsx";
 
 export default function App(){
   return(
@@ -32,6 +33,9 @@ export default function App(){
     </div>
     <div>
       <Map />
+    </div>
+    <div>
+      <Form />
     </div>
     </>
     

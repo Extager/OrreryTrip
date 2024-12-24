@@ -104,7 +104,7 @@ const YandexMap = () => {
       {load ? (
         <div>Загрузка карты...</div>
       ) : (
-        <div ref={mapDiv} className="w-full h-full max-w-[70%] max-h-[60%] max-sm:max-w-[95%]" />
+        <div ref={mapDiv} className="w-full h-full max-w-[70%] max-h-[60%] max-sm:max-w-screen" />
       )}
       <div className="max-w-[40%] flex flex-col text-center text-xl font-extralight text-pretty max-sm:text-balance max-sm:max-w-[100%] max-sm:py-0 mt-10">
         <p>Мы рады пригласить вас на увлекательную экскурсию по Саратовскому планетарию! 
